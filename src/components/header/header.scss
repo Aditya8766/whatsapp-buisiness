@@ -1,0 +1,109 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A9B5DF;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo Icon */
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+  /* Center Navigation Links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #2D336B;
+  }
+  
+  /* Right Side Buttons */
+  .auth-buttons button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .signup-btn {
+    background-color: #2D336B;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .signin-btn {
+    background-color: #7886C7;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .signup-btn:hover, .signin-btn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Mobile Hamburger Menu */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #333;
+      flex-direction: column;
+      align-items: center;
+      display: none;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .auth-buttons {
+      display: none;
+    }
+  }
+  

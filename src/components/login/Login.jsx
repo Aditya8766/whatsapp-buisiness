@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useContext } from "react";
-import axios from "axios";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
+import "./login.scss";
 
 const Login = () => {
   const { login } = useContext(AuthContext);
@@ -14,7 +14,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-page">
       <h2>Login</h2>
       <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
       <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />

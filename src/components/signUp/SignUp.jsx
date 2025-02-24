@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import "./sign-up.scss";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -13,7 +14,7 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div className="sign-up">
       <h2>Signup</h2>
       <input type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)} />
       <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
